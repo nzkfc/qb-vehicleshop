@@ -506,20 +506,41 @@ RegisterNetEvent('qb-vehicleshop:client:openVehCats', function(data)
     }
     for k, v in pairs(QBCore.Shared.Vehicles) do
         if QBCore.Shared.Vehicles[k]["category"] == data.catName then
-            vehMenu[#vehMenu + 1] = {
-                header = v.name,
-                txt = Lang:t('menus.veh_price') .. v.price,
-                icon = "fa-solid fa-car-side",
-                params = {
-                    isServer = true,
-                    event = 'qb-vehicleshop:server:swapVehicle',
-                    args = {
-                        toVehicle = v.model,
-                        ClosestVehicle = ClosestVehicle,
-                        ClosestShop = insideShop
+            if type(QBCore.Shared.Vehicles[k]["shop"]) == 'table' then
+                for _, shop in pairs(QBCore.Shared.Vehicles[k]["shop"]) do
+                    if shop == insideShop then
+                        vehMenu[#vehMenu + 1] = {
+                            header = v.name,
+                            txt = Lang:t('menus.veh_price') .. v.price,
+                            icon = "fa-solid fa-car-side",
+                            params = {
+                                isServer = true,
+                                event = 'qb-vehicleshop:server:swapVehicle',
+                                args = {
+                                    toVehicle = v.model,
+                                    ClosestVehicle = ClosestVehicle,
+                                    ClosestShop = insideShop
+                                }
+                            }
+                        }
+                    end
+                end
+            elseif QBCore.Shared.Vehicles[k]["shop"] == insideShop then
+                vehMenu[#vehMenu + 1] = {
+                    header = v.name,
+                    txt = Lang:t('menus.veh_price') .. v.price,
+                    icon = "fa-solid fa-car-side",
+                    params = {
+                        isServer = true,
+                        event = 'qb-vehicleshop:server:swapVehicle',
+                        args = {
+                            toVehicle = v.model,
+                            ClosestVehicle = ClosestVehicle,
+                            ClosestShop = insideShop
+                        }
                     }
                 }
-            }
+            end
         end
     end
     exports['qb-menu']:openMenu(vehMenu)
