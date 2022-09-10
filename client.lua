@@ -484,11 +484,11 @@ RegisterNetEvent('qb-vehicleshop:client:vehCategories', function()
         if type(QBCore.Shared.Vehicles[k]["shop"]) == 'table' then
             for _, shop in pairs(QBCore.Shared.Vehicles[k]["shop"]) do
                 if shop == insideShop then
-                    catmenu[v] = true
+                    catmenu[k.category] = k.category
                 end
             end
         elseif QBCore.Shared.Vehicles[k]["shop"] == insideShop then
-                catmenu[v] = v
+                catmenu[k.category] = k.category
         end
     end
     for k, v in pairs(catmenu) do
