@@ -31,7 +31,6 @@ Config.Shops = {
         ['showBlip'] = true, -- true or false
         ['blipSprite'] = 326, -- Blip sprite
         ['blipColor'] = 3, -- Blip color
-        },
         ['TestDriveTimeLimit'] = 0.5, -- Time in minutes until the vehicle gets deleted
         ['Location'] = vector3(-45.67, -1098.34, 26.42), -- Blip Location
         ['ReturnLocation'] = vector3(-44.74, -1082.58, 26.68), -- Location to return vehicle, only enables if the vehicleshop has a job owned
