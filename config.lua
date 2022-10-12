@@ -232,4 +232,54 @@ Config.Shops = {
             },
         },
     },
+    ['truck'] = {
+        ['Type'] = 'free-use', -- no player interaction is required to purchase a car
+        ['Zone'] = {
+            ['Shape'] = {--polygon that surrounds the shop
+                vector2(872.23, -1173.5),
+                vector2(868.88, -1162.7),
+                vector2(900.91, -1156.54),
+                vector2(901.96, -1173.71),
+                vector2(883.59, -1174.47),
+                vector2(884.59, -1161.29),
+                vector2(890.06, -1155.0),
+                vector2(907.71, -1168.71)
+            },
+            ['minZ'] = 25.0, -- min height of the shop zone
+            ['maxZ'] = 28.0, -- max height of the shop zone
+            ['size'] = 5.75 -- size of the vehicles zones
+        },
+        ['Job'] = 'none', -- Name of job or none
+        ['ShopLabel'] = 'Truck Motor Shop', -- Blip name
+        ['showBlip'] = true, -- true or false
+        ['blipSprite'] = 326, -- Blip sprite
+        ['blipColor'] = 3, -- Blip color
+        ['TestDriveTimeLimit'] = 0.5, -- Time in minutes until the vehicle gets deleted
+        ['Location'] = vector3(900.47, -1155.74, 25.16), -- Blip Location
+        ['ReturnLocation'] = vector3(900.47, -1155.74, 25.16), -- Location to return vehicle, only enables if the vehicleshop has a job owned
+        ['VehicleSpawn'] = vector4(909.35, -1181.58, 25.55, 177.57), -- Spawn location when vehicle is bought
+        ['TestDriveSpawn'] = vector4(867.65, -1192.4, 25.37, 95.72), -- Spawn location for test drive
+        ['ShowroomVehicles'] = {
+            [1] = {
+                coords = vector4(890.98, -1171.18, 25.09, 273.52), -- where the vehicle will spawn on display
+                defaultVehicle = 'hauler', -- Default display vehicle
+                chosenVehicle = 'hauler', -- Same as default but is dynamically changed when swapping vehicles
+            },
+            [2] = {
+                coords = vector4(878.47, -1170.99, 25.05, 268.14),
+                defaultVehicle = 'phantom',
+                chosenVehicle = 'phantom'
+            },
+            [3] = {
+                coords = vector4(880.43, -1163.59, 24.88, 265.22),
+                defaultVehicle = 'mule',
+                chosenVehicle = 'mule'
+            },
+            [4] = {
+                coords = vector4(896.94, -1162.63, 24.98, 272.93),
+                defaultVehicle = 'mixer',
+                chosenVehicle = 'mixer'
+            },
+        },
+    },
 }
