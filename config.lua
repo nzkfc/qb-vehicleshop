@@ -253,7 +253,7 @@ Config.Shops = {
         ['ShopLabel'] = 'Truck Motor Shop', -- Blip name
         ['showBlip'] = true, -- true or false
         ['blipSprite'] = 477, -- Blip sprite
-        ['blipColor'] = 3, -- Blip color
+        ['blipColor'] = 2, -- Blip color
         ['TestDriveTimeLimit'] = 0.5, -- Time in minutes until the vehicle gets deleted
         ['Location'] = vector3(900.47, -1155.74, 25.16), -- Blip Location
         ['ReturnLocation'] = vector3(900.47, -1155.74, 25.16), -- Location to return vehicle, only enables if the vehicleshop has a job owned
@@ -261,22 +261,22 @@ Config.Shops = {
         ['TestDriveSpawn'] = vector4(867.65, -1192.4, 25.37, 95.72), -- Spawn location for test drive
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(890.98, -1171.18, 25.09, 273.52), -- where the vehicle will spawn on display
+                coords = vector4(890.84, -1170.92, 25.08, 269.58), -- where the vehicle will spawn on display
                 defaultVehicle = 'hauler', -- Default display vehicle
                 chosenVehicle = 'hauler', -- Same as default but is dynamically changed when swapping vehicles
             },
             [2] = {
-                coords = vector4(878.47, -1170.99, 25.05, 268.14),
+                coords = vector4(878.45, -1171.04, 25.05, 273.08),
                 defaultVehicle = 'phantom',
                 chosenVehicle = 'phantom'
             },
             [3] = {
-                coords = vector4(880.43, -1163.59, 24.88, 265.22),
+                coords = vector4(880.44, -1163.59, 24.87, 273.08),
                 defaultVehicle = 'mule',
                 chosenVehicle = 'mule'
             },
             [4] = {
-                coords = vector4(896.94, -1162.63, 24.98, 272.93),
+                coords = vector4(896.95, -1162.62, 24.98, 273.08),
                 defaultVehicle = 'mixer',
                 chosenVehicle = 'mixer'
             },
