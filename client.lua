@@ -58,7 +58,7 @@ local returnTestDrive = {
         params = {
             event = 'qb-vehicleshop:client:TestDriveReturn'
         }
-    }
+    
 }
 
 -- Functions
@@ -391,6 +391,7 @@ function Init()
                 SetVehicleOnGroundProperly(veh)
                 SetEntityInvincible(veh, true)
                 SetVehicleDirtLevel(veh, 0.0)
+		SetVehicleEngineOn(veh, false, true, true)
                 SetVehicleDoorsLocked(veh, 3)
                 SetEntityHeading(veh, Config.Shops[k]["ShowroomVehicles"][i].coords.w)
                 FreezeEntityPosition(veh, true)
